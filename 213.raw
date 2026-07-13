@@ -1,0 +1,17 @@
+NAME = 213
+ROOT = iki1uc
+SYSTEM = 6E
+MODUL = 213
+DIM = REAL
+
+ROLLE = Realwelt / Außenebene / Real‑Output
+FUNKTION = Verbindet das gesamte iki1uc‑System mit der realen Außenwelt
+
+POSITION = REAL‑Ebene
+LINK = ROOT + AXI + 6d + 360 + 100 + ALLout
+REAL‑OUT = aktiv
+REAL‑IN = aktiv
+TMP-LAEUFER = SYQ
+
+STATUS = STABIL
+READY = 100%
