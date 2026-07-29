@@ -2,51 +2,65 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>213 – REAL‑Ebene · iki1uc</title>
+<title>213 · REAL‑Ebene · iki1uc</title>
 
 <style>
-body { background:#000; color:#0f0; font-family:monospace; padding:40px; }
-h1 { color:#0f0; letter-spacing:4px; margin-bottom:30px; }
-.block { background:#111; border:1px solid #333; padding:25px; margin-bottom:30px; border-radius:8px; }
-.title { font-size:22px; color:#6cf; margin-bottom:10px; }
-a { color:#6cf; text-decoration:none; font-weight:bold; }
-pre { background:#000; border-left:3px solid #6cf; padding:15px; margin-top:10px; white-space:pre-wrap; }
+body{background:#000;color:#0f0;font-family:monospace;padding:40px;}
+h1{color:#0f0;margin-bottom:30px;letter-spacing:3px;}
+.block{background:#111;border:1px solid #333;padding:20px;margin-bottom:25px;border-radius:6px;}
+.title{color:#6cf;font-size:20px;margin-bottom:10px;}
+a{color:#6cf;text-decoration:none;}
+pre{background:#000;border-left:3px solid #6cf;padding:12px;white-space:pre-wrap;}
+button{background:#111;color:#0f0;border:1px solid #333;padding:8px 16px;margin-top:10px;}
 </style>
 </head>
 
 <body>
 
-<h1>213 – REAL‑Ebene · iki1uc</h1>
+<h1>213 · REAL‑Ebene</h1>
 
 <div class="block">
-    <div class="title">REAL‑System</div>
-    <p>Dieses Modul verbindet das gesamte iki1uc‑System mit der realen Außenwelt.</p>
+    <div class="title">Kern</div>
+    <p>213 ist die REAL‑Ebene des iki1uc‑Systems.</p>
+    <p>Sie verbindet das System mit der Außenwelt.</p>
 </div>
 
 <div class="block">
     <div class="title">Identität</div>
-    <p><a href="ID.html">→ 213‑Identität öffnen</a></p>
+    <p><a href="ID.html">→ 213‑ID öffnen</a></p>
 </div>
 
 <div class="block">
-    <div class="title">REAL‑Daten</div>
+    <div class="title">Status</div>
     <pre>
-Ebene = REAL
-REAL‑IN = aktiv
-REAL‑OUT = aktiv
-REAL‑FLOW = aktiv
-REAL‑STATE = aktiv
-REAL‑MOVE = aktiv
+REAL.IN   = aktiv
+REAL.OUT  = aktiv
+REAL.STATE= stabil
+READY     = 100%
     </pre>
 </div>
 
 <div class="block">
-    <div class="title">System‑Module</div>
-    <a href="../AXI/index.html">AXI</a>
-    <a href="../6d/index.html">6d</a>
-    <a href="../360/index.html">360</a>
-    <a href="../100/index.html">100</a>
-    <a href="../ALLout/index.html">ALLout</a>
+    <div class="title">Response</div>
+    <button onclick="run()">RESPO</button>
+    <pre id="out">Bereit...</pre>
+</div>
+
+<script>
+function run(){
+    const respo = {
+        layer: "213",
+        mode: "WHIRL_SYS",
+        state: "ok",
+        time: Date.now()
+    };
+    out.textContent = JSON.stringify(respo, null, 2);
+}
+</script>
+
+<div class="block">
+    <div class="title">Dokumentation</div>
+    <p><a href="README.md">→ README anzeigen</a></p>
 </div>
 
 </body>
